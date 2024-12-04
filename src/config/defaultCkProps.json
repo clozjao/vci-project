@@ -1,0 +1,33 @@
+{
+    "theme": {
+        "pbgc": "000",
+        "sbgc": "1a1a1a",
+        "pc": "D2B79E",
+        "sc": "333",
+        "tc": "333",
+        "tpc": "fff",
+        "tsc": "999",
+        "qlbc": "333",
+        "primaryColorLinearGradientParams": {
+            "deg": "",
+            "color1": "F4E7D6",
+            "opacity1": "",
+            "color2": "D2B79E",
+            "opacity2": "",
+            "color3": "",
+            "opacity3": ""
+        },
+        "quickLink": {
+            "sponsor": true
+        },
+        "burger": false,
+        "eventList": {
+            "statementLink": true
+        }
+    },
+    "displayHeader": false,
+    "displayPCLeftSidebar": true,
+    "displayPCNavbar": true,
+    "displayPCNavHome": true,
+    "displayPCNavSearch": true
+}

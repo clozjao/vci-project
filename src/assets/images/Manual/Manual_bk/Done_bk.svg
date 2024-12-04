@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="46" viewBox="0 0 46 46">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.233" cy="0.268" r="0.566" gradientTransform="translate(0.21 -0.087) rotate(37.346)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f5e7c0"/>
+      <stop offset="1" stop-color="#d0ac6d"/>
+    </radialGradient>
+  </defs>
+  <g id="Group_429" data-name="Group 429" transform="translate(-319 -699)">
+    <circle id="Ellipse_87" data-name="Ellipse 87" cx="23" cy="23" r="23" transform="translate(319 699)" fill="url(#radial-gradient)"/>
+    <path id="Icon_awesome-check" data-name="Icon awesome-check" d="M7.777,21.316.335,13.875a1.145,1.145,0,0,1,0-1.619l1.619-1.619a1.145,1.145,0,0,1,1.619,0l5.013,5.013L19.323,4.913a1.145,1.145,0,0,1,1.619,0l1.619,1.619a1.145,1.145,0,0,1,0,1.619L9.4,21.316A1.145,1.145,0,0,1,7.777,21.316Z" transform="translate(331 709.423)"/>
+  </g>
+</svg>

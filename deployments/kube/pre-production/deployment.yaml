@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sport-front-pre
+  labels:
+      app: sport-front-pre
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sport-front-pre
+  template:
+    metadata:
+      labels:
+        app: sport-front-pre
+    spec:
+      containers:
+      - name: sport-front-pre
+        image: "asia.gcr.io/sport-319603/india-front-pre:latest"
+        ports:
+        - containerPort: 80

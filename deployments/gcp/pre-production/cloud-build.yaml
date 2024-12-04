@@ -1,0 +1,8 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [
+      'build', '-t', 'asia.gcr.io/$PROJECT_ID/india-front-pre:$TAG_NAME',
+      '-f', './deployments/docker/pre-production/dockerfile',
+      '--build-arg', 'GIT_SHORT_SHA=$SHORT_SHA',
+      '.']
+images: ['asia.gcr.io/$PROJECT_ID/india-front-pre']

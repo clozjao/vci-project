@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 本地html 與雲端差別在pwa註解及cric引用international-pro的網址 -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPORT</title>
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://vci.uni247.xyz/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LuckySports (60)">
+  <meta property="og:description" content="SPORT - VCI (155-160)">
+  <meta property="og:image" content="https://sprodm.uni247.xyz/images-v3/favicon/android-chrome-192x192.png">
+
+  <!-- pwa -->
+  <!-- <link rel="apple-touch-icon" href="https://vci.uni247.xyz/apple-touch-icon.png" />
+  <link rel="manifest" href="https://vci.uni247.xyz/manifest.json" /> -->
+
+  <!-- widget container style -->
+  <style>
+    .app .app-home,
+    body {
+      background: #111;
+      background-image: initial;
+      background-position: initial;
+      background-size: initial;
+      background-repeat: initial;
+      background-attachment: initial;
+      background-origin: initial;
+      background-clip: initial;
+      background-color: rgb(17, 17, 17);
+    }
+
+    body,
+    html {
+      text-size-adjust: none;
+    }
+
+    .sport-page-wrapper {
+      background-color: #131228;
+      height: var(--window-inner-height, 100vh);
+      position: absolute;
+      width: 100%;
+      z-index: 5;
+    }
+
+    .sport-page-wrapper .sport-widgets {
+      bottom: 0;
+      left: 0;
+      overflow: auto;
+      padding-bottom: 0;
+      position: fixed;
+      right: 0;
+      top: 0;
+    }
+
+    .sport-root {
+      position: relative;
+      overflow-y: auto;
+      font: 12px AvenirNext-Medium, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- sample template -->
+
+  <div id="root">
+    <div id="cricket-page-wrapper" class="sport-page-wrapper">
+      <div class="sport-widgets">
+        <div id="sport-root"></div>
+      </div>
+    </div>
+    <script>
+      function generateId() {
+        let d = Date.now();
+        if (
+          typeof performance !== 'undefined' &&
+          typeof performance.now === 'function'
+        ) {
+          d += performance.now(); //use high-precision timer if available
+        }
+        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(
+          /[xy]/g,
+          function (c) {
+            let r = (d + Math.random() * 16) % 16 | 0;
+            d = Math.floor(d / 16);
+            return (c === 'x' ? r : (r & 0x3) | 0x8).toString(16);
+          }
+        );
+      }
+
+      if (!localStorage.getItem('curUuid')) {
+        localStorage.setItem('curUuid', generateId());
+      }
+
+      let uuid = localStorage.getItem('curUuid');
+
+      fetch(`https://api.uni247.xyz/api/app-order/get-token/?user_id=${uuid}`)
+        .then((response) => {
+          // 操作 response 屬性、方法
+          return response.json();
+        })
+        .then((data) => {
+          // 實際存取到資料
+          localStorage.setItem('access_token', data.token)
+
+          // widget loader
+          function load(a, b, c, d, e, f, g, h, i) {
+            a[e] ||
+              ((i = a[e] =
+                function () {
+                  (a[e].q = a[e].q || []).push(arguments);
+                }),
+                (g = b.createElement(c)),
+                (h = b.getElementsByTagName(c)[0]),
+                (g.async = 1),
+                (g.src = d),
+                h.parentNode.insertBefore(g, h));
+          }
+          load(
+            window,
+            document,
+            "script",
+            '',
+            // `https://storage.googleapis.com/uni247-vci/international-pro.js?v="${Date.now()}"`,
+            "CRIC"
+          )
+
+          // Replace the below token with your token
+          CRIC({
+            token: localStorage.getItem('access_token')
+          });
+
+        })
+        .catch((error) => {
+          // 錯誤回應
+          console.log(error);
+        });
+
+      if (location.hash === "") location.hash = "#/";
+
+    </script>
+</body>
+
+</html>

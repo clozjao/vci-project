@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16.778" height="16.229" viewBox="0 0 16.778 16.229">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1642" data-name="Rectangle 1642" width="16.778" height="16.229" fill="#999"/>
+    </clipPath>
+  </defs>
+  <g id="Group_437" data-name="Group 437" transform="translate(0 0)">
+    <g id="Group_436" data-name="Group 436" transform="translate(0 0)" clip-path="url(#clip-path)">
+      <path id="Path_278" data-name="Path 278" d="M15.312,16.47H1.466A1.467,1.467,0,0,1,0,15V2.785A1.467,1.467,0,0,1,1.466,1.319H15.312a1.467,1.467,0,0,1,1.466,1.466V15a1.467,1.467,0,0,1-1.466,1.466M1.466,2.3a.487.487,0,0,0-.486.486V15a.487.487,0,0,0,.486.487H15.312A.488.488,0,0,0,15.8,15V2.785a.488.488,0,0,0-.487-.486Z" transform="translate(0 -0.242)" fill="#999"/>
+      <path id="Path_279" data-name="Path 279" d="M4.8,3.133a.49.49,0,0,1-.49-.49V.49a.49.49,0,1,1,.979,0V2.644a.49.49,0,0,1-.49.49" transform="translate(-0.792 0)" fill="#999"/>
+      <path id="Path_280" data-name="Path 280" d="M15.523,6.419H1.188a.49.49,0,1,1,0-.979H15.523a.49.49,0,0,1,0,.979" transform="translate(-0.128 -1)" fill="#999"/>
+      <path id="Path_281" data-name="Path 281" d="M11.59,12.756H6.34a.489.489,0,1,1,0-.979h5.25a.489.489,0,1,1,0,.979" transform="translate(-1.075 -2.164)" fill="#999"/>
+      <path id="Path_282" data-name="Path 282" d="M13.517,12.179a.485.485,0,0,1-.336-.134l-2.125-2.008a.49.49,0,1,1,.674-.712l2.123,2.009a.489.489,0,0,1-.335.845" transform="translate(-2.004 -1.689)" fill="#999"/>
+      <path id="Path_283" data-name="Path 283" d="M11.289,14.841a.489.489,0,0,1-.346-.835L13.151,11.8a.489.489,0,1,1,.692.691L11.635,14.7a.489.489,0,0,1-.346.144" transform="translate(-1.985 -2.142)" fill="#999"/>
+      <path id="Path_284" data-name="Path 284" d="M10.168,3.133a.49.49,0,0,1-.49-.49V.49a.49.49,0,1,1,.979,0V2.644a.49.49,0,0,1-.49.49" transform="translate(-1.779 0)" fill="#999"/>
+      <path id="Path_285" data-name="Path 285" d="M15.538,3.133a.49.49,0,0,1-.491-.49V.49a.49.49,0,1,1,.979,0V2.644a.489.489,0,0,1-.489.49" transform="translate(-2.765 0)" fill="#999"/>
+    </g>
+  </g>
+</svg>

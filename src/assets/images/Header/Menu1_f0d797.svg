@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="30" viewBox="0 0 14 9">
+  <defs>
+    <linearGradient id="linear-gradient" y1="5.5" x2="1" y2="5.833" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#F0D797"/>
+      <stop offset="1" stop-color="#DDC08C"/>
+    </linearGradient>
+  </defs>
+  <g id="组_78" data-name="组 78" style="isolation: isolate">
+    <rect id="矩形_2" data-name="矩形 2" width="14" height="1.5" fill="url(#linear-gradient)"/>
+    <rect id="矩形_3" data-name="矩形 3" width="14" height="1.5" transform="translate(0 3.75)" fill="url(#linear-gradient)"/>
+    <rect id="矩形_4" data-name="矩形 4" width="14" height="1.5" transform="translate(0 7.5)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

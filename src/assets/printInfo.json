@@ -1,0 +1,15 @@
+{
+    "00": {
+        "type": 0,
+        "content": "Lucky Sports",
+        "bold": 1,
+        "align": 1,
+        "format": 2
+    },
+    "01": {
+        "type": 0,
+        "content": " ",
+        "bold": 0,
+        "align": 0
+    }
+}
