@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPORT</title>
+
+    <meta property="og:url" content="https://vci.uni247.xyz/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="LuckySports (60)" />
+    <meta property="og:description" content="SPORT - VCI (155-160)" />
+    <meta
+      property="og:image"
+      content="https://sprodm.uni247.xyz/images-v3/favicon/android-chrome-192x192.png"
+    />
+
+    <style>
+      .app .app-home,
+      body {
+        background: #111;
+        background-color: rgb(17, 17, 17);
+      }
+
+      body,
+      html {
+        text-size-adjust: none;
+      }
+
+      .sport-page-wrapper {
+        background-color: #131228;
+        height: var(--window-inner-height, 100vh);
+        position: absolute;
+        width: 100%;
+        z-index: 5;
+      }
+
+      .sport-page-wrapper .sport-widgets {
+        bottom: 0;
+        left: 0;
+        overflow: auto;
+        padding-bottom: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+      }
+
+      .sport-root {
+        position: relative;
+        overflow-y: auto;
+        font: 12px AvenirNext-Medium, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div id="cricket-page-wrapper" class="sport-page-wrapper">
+        <div class="sport-widgets">
+          <div id="sport-root"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/entry.js"></script>
+  </body>
+</html>

@@ -1,21 +1,18 @@
-import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import React, { Suspense, useEffect } from 'react';
 // const Security = React.lazy(() => import('../pages/Security/Security'));
-import { WIDGET_MODE } from '../utils/env';
 import MainContainerPC from '../components/MainContainPC/MainContainPC';
 import CenterSidebarPC from '../components/CenterSidebarPC/CenterSideBar';
-import Tabs from '../components/VciComponents/VciTabs';
-import Vci from '../pages/Vci/vci';
+import Tabs from '../components/VciComponents/VciTabs.jsx';
+import Vci from '../pages/Vci/vci.jsx';
 
 export default function RouteIndexV3() {
-  const Router = WIDGET_MODE === 'on' ? HashRouter : BrowserRouter;
-
   const loader = (children) => {
     return <Suspense>{children}</Suspense>;
   };
 
   return (
-    <Router>
+    <BrowserRouter>
       <MainContainerPC className={'displayPCTopContainer'}>
         <CenterSidebarPC className="CenterSidebarPC">
           <div className="main-area">
@@ -31,6 +28,6 @@ export default function RouteIndexV3() {
           </div>
         </CenterSidebarPC>
       </MainContainerPC>
-    </Router>
+    </BrowserRouter>
   );
 }

@@ -1,5 +1,3 @@
-export const VERSION = process.env.REACT_APP_VERSION;
+export const VERSION = import.meta.env.VITE_VERSION;
 
-export const WIDGET_MODE = process.env.REACT_APP_WIDGET_MODE;
-
-export const ENV = process.env.REACT_APP_ENV;
+export const ENV = import.meta.env.VITE_ENV;

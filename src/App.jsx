@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 // import useDetectDevelopTool from './hook/useDetectDevelopTool';
-import RouteIndexV3 from "./routes/indexV3";
+import RouteIndexV3 from "./routes/indexV3.jsx";
 
 export default function App() {
   // false &&

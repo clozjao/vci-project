@@ -4,10 +4,6 @@ import { VCI_HTTP_BASE_URL } from './vciConfig';
 
 const accessToken = getToken();
 
-const orderRequest = axios.create({
-    baseURL: VCI_HTTP_BASE_URL,
-})
-
 const orderRequestWithToken = axios.create({
     baseURL: VCI_HTTP_BASE_URL,
     headers: {
@@ -16,9 +12,6 @@ const orderRequestWithToken = axios.create({
         'Content-Type': 'application/json',
     },
 })
-
-export const apiGetVciUserToken = (uuid) => orderRequest.get(`get-token/?user_id=${uuid}`);
-
 export const apiGetVciRechargeTimeLeft = () => orderRequestWithToken.get(`get-recharge/`)
 
 export const apiGetVciUserWallet = () => orderRequestWithToken.get(`wallet/`);

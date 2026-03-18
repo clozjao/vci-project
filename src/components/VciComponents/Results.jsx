@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import VciModal from "./VciModal";
+import VciModal from "./VciModal.jsx";
 import { VciBetResultStyled } from "../../pages/Vci/style";
 import { numFormat } from "../../utils/format";
 
@@ -7,7 +7,7 @@ import { apiVciCashoutUpdate } from "../../api/vciCashoutWS";
 import { apiVciCashoutHandle } from "../../api/vciAPI";
 import { useQuery } from "@tanstack/react-query";
 import { useSelector } from "react-redux";
-import MatchEnd from "./MatchEnd";
+import MatchEnd from "./MatchEnd.jsx";
 
 export default function Results(props) {
   const {

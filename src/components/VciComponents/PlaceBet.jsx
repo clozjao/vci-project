@@ -4,9 +4,9 @@ import { IoMdArrowDropup } from "react-icons/io";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { apiVciCreateOrder, apiVciGetEmid } from "../../api/vciAPI";
 import { useQuery } from "@tanstack/react-query";
-import VciModal from "../../components/VciComponents/VciModal";
+import VciModal from "../../components/VciComponents/VciModal.jsx";
 import { useSelector } from "react-redux";
-import CloseRemind from "./CloseRemind";
+import CloseRemind from "./CloseRemind.jsx";
 
 export default function PlaceBet(props) {
   const {

@@ -7,11 +7,11 @@ const ensureTrailingSlash = (value) => {
 };
 
 export const VCI_HTTP_BASE_URL = ensureTrailingSlash(
-  process.env.REACT_APP_VCI_API_BASE_URL || DEFAULT_HTTP_BASE_URL
+  import.meta.env.VITE_VCI_API_BASE_URL || DEFAULT_HTTP_BASE_URL
 );
 
 export const VCI_WS_BASE_URL = ensureTrailingSlash(
-  process.env.REACT_APP_VCI_WS_BASE_URL || DEFAULT_WS_BASE_URL
+  import.meta.env.VITE_VCI_WS_BASE_URL || DEFAULT_WS_BASE_URL
 );
 
-export const isVciMockMode = process.env.REACT_APP_VCI_MOCK === "true";
+export const isVciMockMode = import.meta.env.VITE_VCI_MOCK === "true";

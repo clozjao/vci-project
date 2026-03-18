@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { VciStyled, VciLiveWrapper } from "./style";
 import { numFormat } from "../../utils/format";
-import PlaceBet from "../../components/VciComponents/PlaceBet";
-import Results from "../../components/VciComponents/Results";
+import PlaceBet from "../../components/VciComponents/PlaceBet.jsx";
+import Results from "../../components/VciComponents/Results.jsx";
 import { useQuery } from "@tanstack/react-query";
 import {
   apiGetVciUserWallet,
@@ -12,7 +12,7 @@ import {
   apiGetVciAction,
 } from "../../api/vciAPI";
 import useListenerLmtHeightV3 from "./getIframeHeight";
-import VciBetAnimation from "../../components/VciComponents/VciBetAnimation";
+import VciBetAnimation from "../../components/VciComponents/VciBetAnimation.jsx";
 import { apiVciPriceUpdate } from "../../api/vciPriceWS";
 import { useSelector } from "react-redux";
 
