@@ -6,7 +6,7 @@ import useGetHomepageData from '../hook/SportMatchesList/useGetHomepageData';
 import isCricketTimezone from '../utils/isCricketTimezone';
 import useDecodeToken from '../hook/useDecodeToken';
 import { StyledInplay, StyledFilter } from './Live/style';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { ReactComponent as StyleGoBackIcon } from '../assets/images/PrimaryColorIcon/v3_market_header_back.svg';
 import useBurger from '../hook/burger/useBurger';
 import useGetSportV3 from '../hook/Event/useGetSportV3';
