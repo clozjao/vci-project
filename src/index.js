@@ -8,8 +8,6 @@ import store from './reducers';
 import GlobalStyle from './themes/GlobalStyle';
 import theme from './themes/theme';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { I18nextProvider } from 'react-i18next';
-import i18n from 'i18next';
 
 // Create a client
 const queryClient = new QueryClient();
@@ -22,9 +20,7 @@ root.render(
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <I18nextProvider i18n={i18n}>
-          <App />
-        </I18nextProvider>
+        <App />
       </ThemeProvider>
     </QueryClientProvider>
   </Provider>
@@ -57,11 +53,9 @@ window.CRIC.init = () => {
       <QueryClientProvider client={queryClient}>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <I18nextProvider i18n={i18n}>
-            <GoogleOAuthProvider clientId="547792569780-87skjjeks1jq1tup8jqp9qrvfsk7hcrs.apps.googleusercontent.com">
-              <App />
-            </GoogleOAuthProvider>
-          </I18nextProvider>
+          <GoogleOAuthProvider clientId="547792569780-87skjjeks1jq1tup8jqp9qrvfsk7hcrs.apps.googleusercontent.com">
+            <App />
+          </GoogleOAuthProvider>
         </ThemeProvider>
       </QueryClientProvider>
     </Provider>

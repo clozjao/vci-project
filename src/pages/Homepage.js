@@ -6,7 +6,6 @@ import useGetHomepageData from '../hook/SportMatchesList/useGetHomepageData';
 import isCricketTimezone from '../utils/isCricketTimezone';
 import useDecodeToken from '../hook/useDecodeToken';
 import { StyledInplay, StyledFilter } from './Live/style';
-import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { ReactComponent as StyleGoBackIcon } from '../assets/images/PrimaryColorIcon/v3_market_header_back.svg';
 import useBurger from '../hook/burger/useBurger';
@@ -18,7 +17,6 @@ import {
 export default function Homepage() {
   const { homepageData, totalInPlayCount } = useGetHomepageData();
   const { currency } = useSelector(selectQuote);
-  const { t } = useTranslation();
   const { categoryInfo } = useBurger();
   const { overallMatchesCount } = useSelector(selectQuote);
   const name = categoryInfo.map(d => d.name).find(d => useGetSportV3(d, overallMatchesCount)[0]?.inplay)
@@ -70,14 +68,14 @@ export default function Homepage() {
         {/* 首頁event list */}
         <StyledFilter>
           <div className="filter-btn">
-            <div className="text">{t('inplay')}</div>
+            <div className="text">inplay</div>
           </div>
           <Link
             to={`/live/${name ?? ''}`}
           >
             <StyledInplay>
               <p className='inplay-text num'>{totalInPlayCount}</p>
-              <p className='inplay-text btn-text'>{t('events')}</p>
+              <p className='inplay-text btn-text'>events</p>
               <StyleGoBackIcon className="go-back-icon" />
             </StyledInplay>
           </Link>
@@ -90,7 +88,7 @@ export default function Homepage() {
         })}
         <StyledFilter>
           <div className="filter-btn">
-            <div className="text">{t('upcoming')}</div>
+            <div className="text">upcoming</div>
           </div>
         </StyledFilter>
         {sportNameList.map((v) => {
