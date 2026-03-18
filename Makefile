@@ -1,18 +1,6 @@
 include .env
 export
 
-.PHONY: compose-up
-compose-up:
-	docker compose up -d
-
-.PHONY: compose-down
-compose-down:
-	docker compose down
-
-.PHONY: exec-front
-exec-front:
-	docker exec -it front sh
-
 .PHONY: kube-deploy
 kube-deploy:
 	@if [ ! ${tag} ] | [ ! ${env} ]; \
@@ -117,5 +105,4 @@ gcloud-build:
 		GCP_CLOUD_BUILD_PATH=$(GCP_CLOUD_BUILD_PATH_DEV); \
 	fi; \
 	gcloud builds submit --config $$GCP_CLOUD_BUILD_PATH --substitutions=TAG_NAME="$(tag)",SHORT_SHA="$$(git rev-parse --short HEAD)";
-
 

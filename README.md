@@ -8,12 +8,6 @@
 npm start
 ```
 
-### 方法二 docker 啟動 dev-server
-
-```bash
-docker compose up -d front
-```
-
 ## VCI Mock 本地測試
 
 VCI 相關功能現在可切換到本地 mock API 與 WebSocket，方便在正式 API 無法使用時繼續開發。
@@ -76,4 +70,3 @@ npm run start-v3w:mock
 ```bash
 npm run build
 ```
-

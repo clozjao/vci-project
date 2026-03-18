@@ -59,7 +59,6 @@ const sassModuleRegex = /\.module\.(scss|sass)$/;
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
 module.exports = function (webpackEnv) {
   const isEnvDevelopment = webpackEnv === 'development';
-console.log('webpackEnv', webpackEnv)
 
   const isEnvProduction = webpackEnv === 'production';
 
@@ -677,12 +676,6 @@ console.log('webpackEnv', webpackEnv)
           async: isEnvDevelopment,
           useTypescriptIncrementalApi: true,
           checkSyntacticErrors: true,
-          resolveModuleNameModule: process.versions.pnp
-            ? `${__dirname}/pnpTs.js`
-            : undefined,
-          resolveTypeReferenceDirectiveModule: process.versions.pnp
-            ? `${__dirname}/pnpTs.js`
-            : undefined,
           tsconfig: paths.appTsConfig,
           reportFiles: [
             '**',
