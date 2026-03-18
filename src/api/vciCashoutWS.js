@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import getToken from '../utils/getToken';
 import useWebSocket, { ReadyState } from 'react-use-websocket';
+import { VCI_WS_BASE_URL } from "./vciConfig";
 
 const accessToken = getToken();
 let ws;
 export const apiVciCashoutUpdate = (close, homePage) => {
 
-    const baseURL = 'wss://api.uni247.xyz/api/app-order/'
-    // const baseURL = 'wss://webapi.ckex.xyz/dev-f/app-order/'
+    const baseURL = VCI_WS_BASE_URL
     const wsUrl = `${baseURL}cashout-amount/?authorization=bearer%20${accessToken}`
     const [vciCashoutWsRes, setVciCashoutWsRes] = useState("");
     const wssUrlRef = useRef(null)

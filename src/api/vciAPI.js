@@ -1,16 +1,15 @@
 import axios from 'axios';
 import getToken from '../utils/getToken';
+import { VCI_HTTP_BASE_URL } from './vciConfig';
 
 const accessToken = getToken();
 
 const orderRequest = axios.create({
-    baseURL: 'https://api.uni247.xyz/api/app-order/',
-    // baseURL: 'https://webapi.ckex.xyz/dev-f/app-order/',
+    baseURL: VCI_HTTP_BASE_URL,
 })
 
 const orderRequestWithToken = axios.create({
-    baseURL: 'https://api.uni247.xyz/api/app-order/',
-    // baseURL: 'https://webapi.ckex.xyz/dev-f/app-order/',
+    baseURL: VCI_HTTP_BASE_URL,
     headers: {
         Authorization: 'bearer ' + accessToken,
         Accept: 'application/json',

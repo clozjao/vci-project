@@ -3,6 +3,7 @@ import getToken from '../utils/getToken';
 import useWebSocket, { ReadyState } from 'react-use-websocket';
 import { useDispatch, useSelector } from "react-redux";
 import { SET_VCI_PRICE_RES } from "../actions/actionTypes";
+import { VCI_WS_BASE_URL } from "./vciConfig";
 
 
 
@@ -11,8 +12,7 @@ let ws;
 export const apiVciPriceUpdate = (close, homePage) => {
     const dispatch = useDispatch();
 
-    const baseURL = 'wss://api.uni247.xyz/api/app-order/'
-    // const baseURL = 'wss://webapi.ckex.xyz/dev-f/app-order/'
+    const baseURL = VCI_WS_BASE_URL
     const wsUrl = `${baseURL}market-odds/?authorization=bearer%20${accessToken}`
     const [vciPriceWsRes, setVciPriceWsRes] = useState("");
     const wssUrlRef = useRef(null)
