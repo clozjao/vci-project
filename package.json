@@ -22,13 +22,13 @@
     "react-use-websocket": "^4.3.1",
     "styled-components": "^5.3.11"
   },
-    "scripts": {
-      "mock:vci": "node scripts/mock-vci-server.js",
-      "dev": "vite --host 0.0.0.0",
-      "start-v3w:mock": "VITE_VERSION=3 dotenv -e .env.vci-mock -- vite --host 0.0.0.0 --port 3009",
-      "build": "vite build",
-      "preview": "vite preview --host 0.0.0.0"
-    },
+  "scripts": {
+    "mock:vci": "node scripts/mock-vci-server.js",
+    "dev": "vite --host 0.0.0.0",
+    "start:mock": "VITE_VERSION=3 dotenv -e .env.vci-mock -- vite --host 0.0.0.0 --port 3009",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
   "devDependencies": {
     "@vitejs/plugin-react-swc": "^3.8.0",
     "dotenv-cli": "^5.1.0",
