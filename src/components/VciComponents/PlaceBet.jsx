@@ -204,15 +204,7 @@ export default function PlaceBet(props) {
           >
             <div className="bet-content home">
               <div className={`bet-btn ${homePrice == 0 ? "zero-price" : ""}`}>
-                <img
-                  className={`team-icon ${
-                    homeIconState ? "loaded" : "loading"
-                  }`}
-                  onLoad={() => {
-                    setHomeIconState(true);
-                  }}
-                  src={`https://storage.googleapis.com/uni247-js-bucket-global/images-v3/VciPwa/teamIcon/${homeTeam}.svg`}
-                />
+                <div className={`team-icon`}>Home</div>
               </div>
               <div className="bet-text-num">
                 <div className="bet-title">Home</div>
@@ -266,15 +258,7 @@ export default function PlaceBet(props) {
           >
             <div className="bet-content away">
               <div className={`bet-btn ${awayPrice == 0 ? "zero-price" : ""}`}>
-                <img
-                  className={`team-icon ${
-                    awayIconState ? "loaded" : "loading"
-                  }`}
-                  onLoad={() => {
-                    setAwayIconState(true);
-                  }}
-                  src={`https://storage.googleapis.com/uni247-js-bucket-global/images-v3/VciPwa/teamIcon/${awayTeam}.svg`}
-                />
+                <div className={`team-icon`}>Away</div>
               </div>
               <div className="bet-text-num">
                 <div className="bet-title ">Away</div>

@@ -72,7 +72,7 @@ export const VciLiveWrapper = styled.div`
     height: 279px;
     margin-bottom: 16px;
   }
-  .opening-video{
+  .opening-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -83,14 +83,14 @@ export const VciLiveWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    &.close{
+    &.close {
       animation: closeVideo 0.4s linear forwards;
     }
     @keyframes closeVideo {
-      0%{
+      0% {
         height: 300px;
       }
-      100%{
+      100% {
         height: 0;
       }
     }
@@ -98,7 +98,7 @@ export const VciLiveWrapper = styled.div`
       height: 279px;
     }
   }
-  .half-video{
+  .half-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -110,22 +110,22 @@ export const VciLiveWrapper = styled.div`
     justify-content: center;
     align-items: center;
     animation: closeVideo 0.4s linear forwards;
-    &.open{
+    &.open {
       animation: openVideo 0.4s linear forwards;
     }
     @keyframes openVideo {
-      0%{
+      0% {
         height: 0;
       }
-      100%{
+      100% {
         height: 300px;
       }
     }
     @keyframes closeVideo {
-      0%{
+      0% {
         height: 300px;
       }
-      100%{
+      100% {
         height: 0;
       }
     }
@@ -185,7 +185,8 @@ export const VciPlaceBetStyled = styled.div`
           color: #68f6ff;
           border: 1px solid #68f6ff;
           background: #000;
-          box-shadow: -2px -2px 6px 0px rgba(255, 255, 255, 0.5),
+          box-shadow:
+            -2px -2px 6px 0px rgba(255, 255, 255, 0.5),
             2px 2px 6px 0px rgba(255, 255, 255, 0.5);
         }
       }
@@ -262,16 +263,24 @@ export const VciPlaceBetStyled = styled.div`
               background-repeat: no-repeat;
               background-size: 8px 24px;
               width: 70px;
-              background-position: 0px, 12px center, 24px center, 36px center,
-                48px center, 60px center, 68px center;
+              background-position:
+                0px,
+                12px center,
+                24px center,
+                36px center,
+                48px center,
+                60px center,
+                68px center;
               &.home {
-                background-image: var(--home-blight-bg), var(--home-blight-bg),
+                background-image:
+                  var(--home-blight-bg), var(--home-blight-bg),
                   var(--home-blight-bg), var(--home-dark-bg),
                   var(--home-dark-bg), var(--home-dark-bg);
                 animation: spikeUpHome 0.4s linear infinite alternate;
               }
               &.away {
-                background-image: var(--away-blight-bg), var(--away-blight-bg),
+                background-image:
+                  var(--away-blight-bg), var(--away-blight-bg),
                   var(--away-blight-bg), var(--away-dark-bg),
                   var(--away-dark-bg), var(--away-dark-bg);
                 animation: spikeUpAway 0.4s linear infinite alternate;
@@ -280,48 +289,56 @@ export const VciPlaceBetStyled = styled.div`
             @keyframes spikeUpHome {
               // 0 16 33 50 66 83 100
               0% {
-                background-image: var(--home-blight-bg), var(--home-blight-bg),
+                background-image:
+                  var(--home-blight-bg), var(--home-blight-bg),
                   var(--home-blight-bg), var(--home-dark-bg),
                   var(--home-dark-bg), var(--home-dark-bg);
               }
               33% {
-                background-image: var(--home-dark-bg), var(--home-blight-bg),
+                background-image:
+                  var(--home-dark-bg), var(--home-blight-bg),
                   var(--home-blight-bg), var(--home-blight-bg),
                   var(--home-dark-bg), var(--home-dark-bg);
               }
               66% {
-                background-image: var(--home-dark-bg), var(--home-dark-bg),
+                background-image:
+                  var(--home-dark-bg), var(--home-dark-bg),
                   var(--home-blight-bg), var(--home-blight-bg),
                   var(--home-blight-bg), var(--home-dark-bg);
               }
               100% {
-                background-image: var(--home-dark-bg), var(--home-dark-bg),
-                  var(--home-dark-bg), var(--home-blight-bg),
-                  var(--home-blight-bg), var(--home-blight-bg);
+                background-image:
+                  var(--home-dark-bg), var(--home-dark-bg), var(--home-dark-bg),
+                  var(--home-blight-bg), var(--home-blight-bg),
+                  var(--home-blight-bg);
               }
             }
             @keyframes spikeUpAway {
               // 0 16 33 50 66 83 100
               0% {
-                background-image: var(--away-blight-bg), var(--away-blight-bg),
+                background-image:
+                  var(--away-blight-bg), var(--away-blight-bg),
                   var(--away-blight-bg), var(--away-dark-bg),
                   var(--away-dark-bg), var(--away-dark-bg);
               }
               33% {
-                background-image: var(--away-dark-bg), var(--away-blight-bg),
+                background-image:
+                  var(--away-dark-bg), var(--away-blight-bg),
                   var(--away-blight-bg), var(--away-blight-bg),
                   var(--away-dark-bg), var(--away-dark-bg);
               }
 
               66% {
-                background-image: var(--away-dark-bg), var(--away-dark-bg),
+                background-image:
+                  var(--away-dark-bg), var(--away-dark-bg),
                   var(--away-blight-bg), var(--away-blight-bg),
                   var(--away-blight-bg), var(--away-dark-bg);
               }
               100% {
-                background-image: var(--away-dark-bg), var(--away-dark-bg),
-                  var(--away-dark-bg), var(--away-blight-bg),
-                  var(--away-blight-bg), var(--away-blight-bg);
+                background-image:
+                  var(--away-dark-bg), var(--away-dark-bg), var(--away-dark-bg),
+                  var(--away-blight-bg), var(--away-blight-bg),
+                  var(--away-blight-bg);
               }
             }
           }
@@ -341,6 +358,9 @@ export const VciPlaceBetStyled = styled.div`
           .team-icon {
             width: 100%;
             height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             &.loading {
               display: none;
@@ -362,7 +382,8 @@ export const VciPlaceBetStyled = styled.div`
         right: -35px;
         align-items: end;
         transform: skewX(-15deg);
-        box-shadow: -2px -2px 6px 0px rgba(255, 255, 255, 0.5),
+        box-shadow:
+          -2px -2px 6px 0px rgba(255, 255, 255, 0.5),
           2px 2px 6px 0px rgba(255, 255, 255, 0.5);
       }
       &.home {
@@ -376,7 +397,8 @@ export const VciPlaceBetStyled = styled.div`
         left: -35px;
         top: 10px;
         transform: skewX(-15deg);
-        box-shadow: 0px 4px 4px 0px rgba(149, 2, 202, 0.46) inset,
+        box-shadow:
+          0px 4px 4px 0px rgba(149, 2, 202, 0.46) inset,
           -2px -2px 6px 0px rgba(149, 2, 202, 0.46),
           2px 2px 6px 0px rgba(149, 2, 202, 0.46);
       }
@@ -399,7 +421,8 @@ export const VciPlaceBetStyled = styled.div`
       line-height: 1.2;
       color: #68f6ff;
       gap: 16px;
-      text-shadow: -2px -2px 6px rgba(2, 190, 202, 0.46),
+      text-shadow:
+        -2px -2px 6px rgba(2, 190, 202, 0.46),
         2px 2px 6px rgba(2, 190, 202, 0.46);
       letter-spacing: 0.15px;
       margin-bottom: 16px;
@@ -418,7 +441,8 @@ export const VciPlaceBetStyled = styled.div`
       gap: 8px;
       padding-inline: 16px;
       border: 2px solid #00929b;
-      box-shadow: -2px -2px 6px 0px rgba(2, 190, 202, 0.46),
+      box-shadow:
+        -2px -2px 6px 0px rgba(2, 190, 202, 0.46),
         2px 2px 6px 0px rgba(2, 190, 202, 0.46);
       margin-bottom: 16px;
 
@@ -430,7 +454,8 @@ export const VciPlaceBetStyled = styled.div`
         height: 23px;
         flex: 1;
         background-color: #68f6ff;
-        box-shadow: 0px 4px 4px 0px #02beca inset,
+        box-shadow:
+          0px 4px 4px 0px #02beca inset,
           -2px -2px 6px 0px rgba(2, 190, 202, 0.46),
           2px 2px 6px 0px rgba(2, 190, 202, 0.46);
 
@@ -963,7 +988,9 @@ export const VciMatchEndStyled = styled.div`
   .vci-content-box {
     font-family: "Roboto";
     border-block: 1px solid #00929b;
-    box-shadow: 0px 0px #02beca inset, -2px -2px 6px 0px rgba(2, 190, 202, 0.46),
+    box-shadow:
+      0px 0px #02beca inset,
+      -2px -2px 6px 0px rgba(2, 190, 202, 0.46),
       2px 2px 6px 0px rgba(2, 190, 202, 0.46);
     position: relative;
     padding: 9px 24px;
@@ -1037,27 +1064,28 @@ export const VciCloseRemindStyled = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity:1;
+  opacity: 1;
   .text {
-    letter-spacing:0.18px;
-    font-family: 'Roboto';
+    letter-spacing: 0.18px;
+    font-family: "Roboto";
     font-size: 24px;
     font-style: italic;
     font-weight: 600;
     color: #68f6ff;
-    text-shadow: -2px -2px 6px rgba(2, 190, 202, 0.46),
+    text-shadow:
+      -2px -2px 6px rgba(2, 190, 202, 0.46),
       2px 2px 6px rgba(2, 190, 202, 0.46);
-    user-select:none;
+    user-select: none;
   }
-  &.close{
+  &.close {
     animation: closeRemind 0.4s linear forwards;
   }
   @keyframes closeRemind {
-    0%{
-      opacity:1;
+    0% {
+      opacity: 1;
     }
-    100%{
-      opacity:0;
+    100% {
+      opacity: 0;
     }
   }
 `;

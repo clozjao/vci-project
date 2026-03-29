@@ -40,31 +40,26 @@ export default function Vci() {
   const [newBalance, setNewBalance] = useState(false);
 
   // 開場影片
-  const [openingState, setOpeningState] = useState(true);
-  const openingVideoDOM = document.querySelector(".opening-video");
+  // const [openingState, setOpeningState] = useState(true);
+  // const openingVideoDOM = document.querySelector(".opening-video");
 
   // 中場關盤影片
-  const halfVideoDOM = document.querySelector(".half-video");
+  // const halfVideoDOM = document.querySelector(".half-video");
 
-  useEffect(() => {
-    if (vciPriceWsRes?.resp?.s === "suspended") {
-      halfVideoDOM.classList.add("open")
-    }
-    if(vciPriceWsRes?.resp?.s === "open"){
-      halfVideoDOM.classList.remove("open")
-    }
-  }, [vciPriceWsRes?.resp?.s]);
+  // useEffect(() => {
+  //   if (vciPriceWsRes?.resp?.s === "suspended") {
+  //     halfVideoDOM.classList.add("open");
+  //   }
+  //   if (vciPriceWsRes?.resp?.s === "open") {
+  //     halfVideoDOM.classList.remove("open");
+  //   }
+  // }, [vciPriceWsRes?.resp?.s]);
 
   // 偵測使用者動作
   const [actionPayload, setActionPayload] = useState(null);
 
   // 取得第一次進入頁面emid 給直播用
-  const {
-    data: emidData,
-    error: emidError,
-    isLoading: emidLoading,
-    isFetching: emidFetching,
-  } = useQuery({
+  const { data: emidData } = useQuery({
     queryKey: ["vci", "emid"],
     queryFn: () => apiVciGetEmid().then((res) => res.data),
     staleTime: Infinity,
@@ -72,12 +67,12 @@ export default function Vci() {
     retry: false,
   });
 
-  const iframeDOM = document.getElementById("vci-live");
+  // const iframeDOM = document.getElementById("vci-live");
 
   useEffect(() => {
     if (!!emidData) {
-      iframeDOM.src = `https://lmtloader.ckex.xyz/v3-new-lmt-bk-language/preview.html?matchId=${emidData?.event.event_id}&language=en&bal=0&autoplay&mute=1`;
-      iframeDOM.style.backgroundColor = "transparent";
+      // iframeDOM.src = `https://lmtloader.ckex.xyz/v3-new-lmt-bk-language/preview.html?matchId=${emidData?.event.event_id}&language=en&bal=0&autoplay&mute=1`;
+      // iframeDOM.style.backgroundColor = "transparent";
 
       setActionPayload({
         event_id: emidData?.event.event_id,
@@ -87,12 +82,7 @@ export default function Vci() {
   }, [emidData]);
 
   // 偵測User現在可以做什麼事情
-  const {
-    data: actionData,
-    error: actionError,
-    isFetching: actionFetching,
-    isLoading: actionLoading,
-  } = useQuery({
+  const { data: actionData } = useQuery({
     queryKey: ["vci-action", actionPayload, switchComponents],
     queryFn: () => apiGetVciAction(actionPayload).then((res) => res.data),
     retry: false,
@@ -100,19 +90,19 @@ export default function Vci() {
     staleTime: Infinity,
   });
 
-  useEffect(() => {
-    let timer;
+  // useEffect(() => {
+  //   let timer;
 
-    if (!!iframeHeight) {
-      openingVideoDOM?.classList.add("close");
-      timer = setTimeout(() => {
-        setOpeningState(false);
-      }, 3000);
-      return () => {
-        clearTimeout(timer);
-      };
-    }
-  }, [iframeHeight]);
+  //   if (!!iframeHeight) {
+  //     openingVideoDOM?.classList.add("close");
+  //     timer = setTimeout(() => {
+  //       setOpeningState(false);
+  //     }, 3000);
+  //     return () => {
+  //       clearTimeout(timer);
+  //     };
+  //   }
+  // }, [iframeHeight]);
 
   const [credit, setCredit] = useState(100);
   const [betTeam, setBetTeam] = useState(null);
@@ -142,7 +132,6 @@ export default function Vci() {
   // 錢包餘額 此api 僅用於剛進入app時首次得到餘額及下注後的餘額 newBalance為boolean
   const {
     data: walletData,
-    error: walletError,
     isFetching: walletFetching,
     isLoading: walletLoading,
   } = useQuery({
@@ -225,7 +214,8 @@ export default function Vci() {
             iframeBodyHeight === 0 ? defaultHeight : iframeBodyHeight
           }
         >
-          {openingState && (
+          <iframe src="https://sp-menu-online.firebaseapp.com/matchAnimation"></iframe>
+          {/* {openingState && (
             <video autoPlay muted loop playsInline className="opening-video">
               <source
                 src="https://storage.googleapis.com/uni247-js-bucket-global/images-v3/VciPwa/openingV3.mp4"
@@ -233,13 +223,13 @@ export default function Vci() {
               />
             </video>
           )}
-            <video autoPlay muted loop playsInline className="half-video">
-              <source
-                src="https://storage.googleapis.com/uni247-js-bucket-global/images-v3/VciPwa/middleVideo.mp4"
-                type="video/mp4"
-              />
-            </video>
-          <iframe id={"vci-live"} src={``} allow="autoplay" muted />
+          <video autoPlay muted loop playsInline className="half-video">
+            <source
+              src="https://storage.googleapis.com/uni247-js-bucket-global/images-v3/VciPwa/middleVideo.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <iframe id={"vci-live"} src={``} allow="autoplay" muted /> */}
         </VciLiveWrapper>
         <div className="balance-area">
           <div className="text">{`Balance `}</div>
